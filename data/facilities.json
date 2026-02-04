@@ -1,0 +1,148 @@
+[
+    {
+        "id": "tokyo_innovation_base",
+        "name": "Tokyo Innovation Base",
+        "prefecture": "東京都",
+        "city": "千代田区",
+        "address": "東京都千代田区丸の内3-8-3",
+        "website": "https://tokyo-innovation-base.metro.tokyo.lg.jp/",
+        "connpass_group": null,
+        "peatix_group": null,
+        "twitter": "@Tokyo_I_Base",
+        "status": "active",
+        "notes": "東京都のグローバルスタートアップ拠点"
+    },
+    {
+        "id": "shibuya_startup_support",
+        "name": "Shibuya Startup Support",
+        "prefecture": "東京都",
+        "city": "渋谷区",
+        "address": "東京都渋谷区",
+        "website": "https://shibuya-startup-support.jp/",
+        "connpass_group": null,
+        "peatix_group": null,
+        "status": "active",
+        "notes": "渋谷区のスタートアップ支援"
+    },
+    {
+        "id": "hatsu_shin_kanagawa",
+        "name": "HATSU-SHIN かながわモデル",
+        "prefecture": "神奈川県",
+        "city": "横浜市",
+        "website": "https://www.pref.kanagawa.jp/docs/sr4/hatsu-shin.html",
+        "status": "active",
+        "notes": "神奈川県のベンチャー支援モデル"
+    },
+    {
+        "id": "kyobashi_incubation",
+        "name": "京橋エドグラン インキュベーションキャンバス",
+        "prefecture": "東京都",
+        "city": "中央区",
+        "address": "東京都中央区京橋2-2-1 京橋エドグラン29F",
+        "website": "https://www.waseda.jp/inst/entrepreneur/",
+        "status": "active",
+        "notes": "早稲田大学連携インキュベーション"
+    },
+    {
+        "id": "osaka_innovation_hub",
+        "name": "Osaka Innovation Hub",
+        "prefecture": "大阪府",
+        "city": "大阪市",
+        "address": "大阪市北区大深町3-1 グランフロント大阪",
+        "website": "https://www.innovation-osaka.jp/",
+        "status": "active",
+        "notes": "大阪市のイノベーション創出拠点"
+    },
+    {
+        "id": "fukuoka_growth_next",
+        "name": "Fukuoka Growth Next",
+        "prefecture": "福岡県",
+        "city": "福岡市",
+        "address": "福岡市中央区大名2-6-11",
+        "website": "https://growth-next.com/",
+        "status": "active",
+        "notes": "福岡市のスタートアップ支援施設"
+    },
+    {
+        "id": "nagoya_innovators_garage",
+        "name": "NAGOYA INNOVATOR'S GARAGE",
+        "prefecture": "愛知県",
+        "city": "名古屋市",
+        "address": "名古屋市中区栄3-18-1 ナディアパーク4F",
+        "website": "https://innovation-nagoya.jp/",
+        "status": "active",
+        "notes": "名古屋市のイノベーション拠点"
+    },
+    {
+        "id": "smrj_d_egg",
+        "name": "同志社大学連携型起業家育成施設（D-egg）",
+        "prefecture": "京都府",
+        "city": "京田辺市",
+        "website": "https://www.smrj.go.jp/",
+        "status": "active",
+        "notes": "中小機構連携インキュベーション"
+    },
+    {
+        "id": "i_bird_ishikawa",
+        "name": "いしかわ大学連携インキュベータ（i-BIRD）",
+        "prefecture": "石川県",
+        "city": "野々市市",
+        "website": "https://www.smrj.go.jp/",
+        "status": "active",
+        "notes": "石川県の大学連携インキュベーション"
+    },
+    {
+        "id": "venture_plaza_funabashi",
+        "name": "ベンチャープラザ船橋",
+        "prefecture": "千葉県",
+        "city": "船橋市",
+        "website": "https://www.smrj.go.jp/",
+        "status": "active",
+        "notes": "中小機構運営インキュベーション"
+    },
+    {
+        "id": "itabashi_kigyou_center",
+        "name": "板橋区立企業活性化センター",
+        "prefecture": "東京都",
+        "city": "板橋区",
+        "website": "https://www.itabashi-kigyou.jp/",
+        "status": "active",
+        "notes": "月額1.3万円からのスタートアップオフィス"
+    },
+    {
+        "id": "kobe_startup_office",
+        "name": "神戸スタートアップオフィス",
+        "prefecture": "兵庫県",
+        "city": "神戸市",
+        "website": "https://www.city.kobe.lg.jp/",
+        "status": "active",
+        "notes": "神戸市のスタートアップ支援"
+    },
+    {
+        "id": "sapporo_startup_studio",
+        "name": "SAPPORO Startup Studio",
+        "prefecture": "北海道",
+        "city": "札幌市",
+        "website": "https://www.city.sapporo.jp/",
+        "status": "active",
+        "notes": "札幌市のスタートアップ支援"
+    },
+    {
+        "id": "sendai_x_tech",
+        "name": "SENDAI X-TECH Innovation Project",
+        "prefecture": "宮城県",
+        "city": "仙台市",
+        "website": "https://www.city.sendai.jp/",
+        "status": "active",
+        "notes": "仙台市のテック系スタートアップ支援"
+    },
+    {
+        "id": "hiroshima_sandbox",
+        "name": "ひろしまサンドボックス",
+        "prefecture": "広島県",
+        "city": "広島市",
+        "website": "https://hiroshima-sandbox.jp/",
+        "status": "active",
+        "notes": "広島県のDX・イノベーション支援"
+    }
+]

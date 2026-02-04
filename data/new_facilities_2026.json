@@ -1,0 +1,77 @@
+[
+    {
+        "id": "unknown_unknown_jimbocho",
+        "name": "Unknown Unknown（アンノウン・アンノウン）",
+        "prefecture": "東京都",
+        "city": "千代田区",
+        "address": "東京都千代田区神田神保町",
+        "website": null,
+        "twitter": null,
+        "status": "new",
+        "opening_date": "2026-02",
+        "notes": "知と文化のインキュベーション拠点。イベントスペース、ギャラリー、バー、ライブラリーで構成。デサイロ運営。",
+        "priority": "high",
+        "approach_strategy": "オープニングイベントに参加、運営者との関係構築を優先"
+    },
+    {
+        "id": "f_labs_kyudai",
+        "name": "エフラボ九大病院（F-LABS Kyushu University Hospital）",
+        "prefecture": "福岡県",
+        "city": "福岡市東区",
+        "address": "福岡市東区馬出3丁目 九州大学病院キャンパス内",
+        "website": "https://fj-lifescience.jp/",
+        "twitter": null,
+        "status": "active",
+        "opening_date": "2026-01-26",
+        "notes": "ライフサイエンス特化型スタートアップ支援施設。福岡地所運営。九大病院と渡り廊下直結。創薬・医療機器開発向け。",
+        "priority": "high",
+        "approach_strategy": "ライフサイエンス系起業家との接点として活用。バイオベンチャー向け補助金提案"
+    },
+    {
+        "id": "league_jimbocho",
+        "name": "LEAGUE神保町",
+        "prefecture": "東京都",
+        "city": "千代田区",
+        "address": "東京都千代田区神田神保町",
+        "website": "https://league-brands.jp/",
+        "status": "active",
+        "opening_date": "2026-01",
+        "notes": "2026年1月より一部オフィス入居可能。コワーキングスペース併設。",
+        "priority": "medium",
+        "approach_strategy": "入居企業向けの補助金セミナー開催を提案"
+    },
+    {
+        "id": "regacy_innovation",
+        "name": "ReGACY Innovation Group",
+        "prefecture": "東京都",
+        "city": "千代田区",
+        "address": "東京都千代田区神保町",
+        "website": null,
+        "status": "active",
+        "notes": "パナソニック共同アクセラレータープログラム実施中（2025年11月〜2026年3月）",
+        "priority": "high",
+        "approach_strategy": "アクセラレーター参加企業との接点を構築"
+    },
+    {
+        "id": "forge_hw_accelerator",
+        "name": "Forge（ハードウェアスタートアップ支援）",
+        "prefecture": "東京都",
+        "city": null,
+        "website": null,
+        "status": "active",
+        "notes": "ハードウェアスタートアップ支援プログラム。2026年2月にDemo Day開催予定。",
+        "priority": "high",
+        "approach_strategy": "Demo Dayに参加、ハードウェア系の補助金（ものづくり補助金等）を提案"
+    },
+    {
+        "id": "tribus_ricoh",
+        "name": "TRIBUS 2025（リコー）",
+        "prefecture": "東京都",
+        "city": null,
+        "website": "https://www.ricoh.com/",
+        "status": "active",
+        "notes": "リコー社内外統合型アクセラレーター。2026年2月に成果発表会開催。",
+        "priority": "medium",
+        "approach_strategy": "成果発表会への参加、事業化支援としての補助金活用を提案"
+    }
+]
