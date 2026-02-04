@@ -1,0 +1,282 @@
+{
+  "generated_at": "2026-02-04T23:45:14.530115",
+  "summary": {
+    "total_facilities": 3,
+    "active": 2,
+    "dormant": 1,
+    "total_events": 14
+  },
+  "facilities": [
+    {
+      "facility_name": "Banko",
+      "url": "https://banko.or.jp/souseijyuku2026.pdf",
+      "status": "dormant",
+      "last_event_date": null,
+      "event_list": [],
+      "external_platforms": [],
+      "checked_pages": [],
+      "error": "Page.goto: Download is starting\nCall log:\n  - navigating to \"https://banko.or.jp/souseijyuku2026.pdf\", waiting until \"domcontentloaded\"\n",
+      "facility_id": "csv_109",
+      "prefecture": "三重県"
+    },
+    {
+      "facility_name": "Meiwa-Ic",
+      "url": "https://meiwa-ic.com/news/",
+      "status": "active",
+      "last_event_date": "2026-03-16",
+      "event_list": [
+        {
+          "title": "イベント (2026-03-16)",
+          "date": "2026-03-16",
+          "link": "https://meiwa-ic.com/category/event/",
+          "facility_name": "Meiwa-Ic",
+          "facility_id": "csv_111",
+          "prefecture": "三重県"
+        },
+        {
+          "title": "2025.03.23",
+          "date": "2025-03-23",
+          "link": "https://meiwa-ic.com/news/",
+          "facility_name": "Meiwa-Ic",
+          "facility_id": "csv_111",
+          "prefecture": "三重県"
+        },
+        {
+          "title": "2025.03.14",
+          "date": "2025-03-14",
+          "link": "https://meiwa-ic.com/news/",
+          "facility_name": "Meiwa-Ic",
+          "facility_id": "csv_111",
+          "prefecture": "三重県"
+        },
+        {
+          "title": "2025.03.10",
+          "date": "2025-03-10",
+          "link": "https://meiwa-ic.com/category/news/",
+          "facility_name": "Meiwa-Ic",
+          "facility_id": "csv_111",
+          "prefecture": "三重県"
+        },
+        {
+          "title": "2025.02.28",
+          "date": "2025-02-28",
+          "link": "https://meiwa-ic.com/category/event/",
+          "facility_name": "Meiwa-Ic",
+          "facility_id": "csv_111",
+          "prefecture": "三重県"
+        },
+        {
+          "title": "2025.02.17",
+          "date": "2025-02-17",
+          "link": "https://meiwa-ic.com/category/news/",
+          "facility_name": "Meiwa-Ic",
+          "facility_id": "csv_111",
+          "prefecture": "三重県"
+        },
+        {
+          "title": "2025.01.15",
+          "date": "2025-01-15",
+          "link": "https://meiwa-ic.com/category/news/",
+          "facility_name": "Meiwa-Ic",
+          "facility_id": "csv_111",
+          "prefecture": "三重県"
+        }
+      ],
+      "external_platforms": [],
+      "checked_pages": [
+        "https://meiwa-ic.com/news/",
+        "https://meiwa-ic.com/category/news/",
+        "https://meiwa-ic.com/category/event/"
+      ],
+      "facility_id": "csv_111",
+      "prefecture": "三重県"
+    },
+    {
+      "facility_name": "Pref",
+      "url": "https://www.pref.mie.lg.jp/TOPICS/m0360800113.htm",
+      "status": "active",
+      "last_event_date": "2027-01-21",
+      "event_list": [
+        {
+          "title": "令和08年01月21日",
+          "date": "2027-01-21",
+          "link": "https://www.pref.mie.lg.jp/TOPICS/m0360800113.htm",
+          "facility_name": "Pref",
+          "facility_id": "csv_108",
+          "prefecture": "三重県"
+        },
+        {
+          "title": "令和08年02月04日",
+          "date": "2026-04-01",
+          "link": "https://www.pref.mie.lg.jp/s_kensei/index.htm",
+          "facility_name": "Pref",
+          "facility_id": "csv_108",
+          "prefecture": "三重県"
+        },
+        {
+          "title": "令和８年３月２日（月曜日）　１１時００分から１８時４５分まで（予定）",
+          "date": "2026-03-02",
+          "link": "https://www.pref.mie.lg.jp/TOPICS/m0360800113.htm",
+          "facility_name": "Pref",
+          "facility_id": "csv_108",
+          "prefecture": "三重県"
+        },
+        {
+          "title": "※申込締切：２月２７日（金曜日）２３時５９分まで",
+          "date": "2026-02-27",
+          "link": "https://www.pref.mie.lg.jp/TOPICS/m0360800113.htm",
+          "facility_name": "Pref",
+          "facility_id": "csv_108",
+          "prefecture": "三重県"
+        },
+        {
+          "title": "令和08年02月04日\t三重県立子ども心身発達医療センター患者給食業務委託にかかる企画提案コンペの結",
+          "date": "2026-02-04",
+          "link": "https://www.pref.mie.lg.jp/s_kensei/index.htm",
+          "facility_name": "Pref",
+          "facility_id": "csv_108",
+          "prefecture": "三重県"
+        },
+        {
+          "title": "令和08年02月03日\t令和８年度SNSを活用した相談事業業務委託企画提案コンペを実施します\t研修企",
+          "date": "2026-02-03",
+          "link": "https://www.pref.mie.lg.jp/s_kensei/index.htm",
+          "facility_name": "Pref",
+          "facility_id": "csv_108",
+          "prefecture": "三重県"
+        },
+        {
+          "title": "令和08年01月21日",
+          "date": "2026-01-21",
+          "link": "https://www.pref.mie.lg.jp/TOPICS/m0360800113.htm",
+          "facility_name": "Pref",
+          "facility_id": "csv_108",
+          "prefecture": "三重県"
+        }
+      ],
+      "external_platforms": [],
+      "checked_pages": [
+        "https://www.pref.mie.lg.jp/TOPICS/m0360800113.htm",
+        "https://www.pref.mie.lg.jp/TOPICS/m0360800113.htm#container",
+        "https://www.pref.mie.lg.jp/s_kensei/index.htm",
+        "https://www.pref.mie.lg.jp/s_kensei/oshirase/index.htm"
+      ],
+      "facility_id": "csv_108",
+      "prefecture": "三重県"
+    }
+  ],
+  "events": [
+    {
+      "title": "令和08年01月21日",
+      "date": "2027-01-21",
+      "link": "https://www.pref.mie.lg.jp/TOPICS/m0360800113.htm",
+      "facility_name": "Pref",
+      "facility_id": "csv_108",
+      "prefecture": "三重県"
+    },
+    {
+      "title": "令和08年02月04日",
+      "date": "2026-04-01",
+      "link": "https://www.pref.mie.lg.jp/s_kensei/index.htm",
+      "facility_name": "Pref",
+      "facility_id": "csv_108",
+      "prefecture": "三重県"
+    },
+    {
+      "title": "イベント (2026-03-16)",
+      "date": "2026-03-16",
+      "link": "https://meiwa-ic.com/category/event/",
+      "facility_name": "Meiwa-Ic",
+      "facility_id": "csv_111",
+      "prefecture": "三重県"
+    },
+    {
+      "title": "令和８年３月２日（月曜日）　１１時００分から１８時４５分まで（予定）",
+      "date": "2026-03-02",
+      "link": "https://www.pref.mie.lg.jp/TOPICS/m0360800113.htm",
+      "facility_name": "Pref",
+      "facility_id": "csv_108",
+      "prefecture": "三重県"
+    },
+    {
+      "title": "※申込締切：２月２７日（金曜日）２３時５９分まで",
+      "date": "2026-02-27",
+      "link": "https://www.pref.mie.lg.jp/TOPICS/m0360800113.htm",
+      "facility_name": "Pref",
+      "facility_id": "csv_108",
+      "prefecture": "三重県"
+    },
+    {
+      "title": "令和08年02月04日\t三重県立子ども心身発達医療センター患者給食業務委託にかかる企画提案コンペの結",
+      "date": "2026-02-04",
+      "link": "https://www.pref.mie.lg.jp/s_kensei/index.htm",
+      "facility_name": "Pref",
+      "facility_id": "csv_108",
+      "prefecture": "三重県"
+    },
+    {
+      "title": "令和08年02月03日\t令和８年度SNSを活用した相談事業業務委託企画提案コンペを実施します\t研修企",
+      "date": "2026-02-03",
+      "link": "https://www.pref.mie.lg.jp/s_kensei/index.htm",
+      "facility_name": "Pref",
+      "facility_id": "csv_108",
+      "prefecture": "三重県"
+    },
+    {
+      "title": "令和08年01月21日",
+      "date": "2026-01-21",
+      "link": "https://www.pref.mie.lg.jp/TOPICS/m0360800113.htm",
+      "facility_name": "Pref",
+      "facility_id": "csv_108",
+      "prefecture": "三重県"
+    },
+    {
+      "title": "2025.03.23",
+      "date": "2025-03-23",
+      "link": "https://meiwa-ic.com/news/",
+      "facility_name": "Meiwa-Ic",
+      "facility_id": "csv_111",
+      "prefecture": "三重県"
+    },
+    {
+      "title": "2025.03.14",
+      "date": "2025-03-14",
+      "link": "https://meiwa-ic.com/news/",
+      "facility_name": "Meiwa-Ic",
+      "facility_id": "csv_111",
+      "prefecture": "三重県"
+    },
+    {
+      "title": "2025.03.10",
+      "date": "2025-03-10",
+      "link": "https://meiwa-ic.com/category/news/",
+      "facility_name": "Meiwa-Ic",
+      "facility_id": "csv_111",
+      "prefecture": "三重県"
+    },
+    {
+      "title": "2025.02.28",
+      "date": "2025-02-28",
+      "link": "https://meiwa-ic.com/category/event/",
+      "facility_name": "Meiwa-Ic",
+      "facility_id": "csv_111",
+      "prefecture": "三重県"
+    },
+    {
+      "title": "2025.02.17",
+      "date": "2025-02-17",
+      "link": "https://meiwa-ic.com/category/news/",
+      "facility_name": "Meiwa-Ic",
+      "facility_id": "csv_111",
+      "prefecture": "三重県"
+    },
+    {
+      "title": "2025.01.15",
+      "date": "2025-01-15",
+      "link": "https://meiwa-ic.com/category/news/",
+      "facility_name": "Meiwa-Ic",
+      "facility_id": "csv_111",
+      "prefecture": "三重県"
+    }
+  ]
+}

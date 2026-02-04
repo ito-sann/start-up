@@ -186,6 +186,17 @@ def get_facility_by_id(facility_id: str) -> Optional[dict]:
     return dict(row) if row else None
 
 
+def get_facility_by_url(url: str) -> Optional[dict]:
+    """指定されたURLの施設情報を取得（重複チェック用）"""
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM facilities WHERE website = ?', (url,))
+    row = cursor.fetchone()
+    conn.close()
+    
+    return dict(row) if row else None
+
+
 def get_events(
     facility_id: Optional[str] = None,
     from_date: Optional[str] = None,
@@ -242,7 +253,7 @@ def get_latest_event_date(facility_id: str) -> Optional[str]:
     return row['latest_date'] if row and row['latest_date'] else None
 
 
-def update_facility_status(facility_id: str, new_status: str, reason: str = None):
+def update_facility_status(facility_id: str, new_status: str, last_event_date: str = None, reason: str = None):
     """施設のステータスを更新"""
     conn = get_connection()
     cursor = conn.cursor()
@@ -253,11 +264,18 @@ def update_facility_status(facility_id: str, new_status: str, reason: str = None
     old_status = row['status'] if row else None
     
     # ステータス更新
-    cursor.execute("""
-        UPDATE facilities 
-        SET status = ?, updated_at = ? 
-        WHERE id = ?
-    """, (new_status, datetime.now().isoformat(), facility_id))
+    if last_event_date:
+        cursor.execute("""
+            UPDATE facilities 
+            SET status = ?, last_event_date = ?, updated_at = ? 
+            WHERE id = ?
+        """, (new_status, last_event_date, datetime.now().isoformat(), facility_id))
+    else:
+        cursor.execute("""
+            UPDATE facilities 
+            SET status = ?, updated_at = ? 
+            WHERE id = ?
+        """, (new_status, datetime.now().isoformat(), facility_id))
     
     # 履歴を記録
     cursor.execute("""

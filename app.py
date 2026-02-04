@@ -117,7 +117,7 @@ def main():
         
         page = st.radio(
             "ページ選択",
-            ["📊 ダッシュボード", "📅 イベント一覧", "🏢 施設管理", "📈 分析", "📖 Tips"]
+            ["📊 ダッシュボード", "📅 イベント一覧", "📆 カレンダー", "🏢 施設管理", "📈 分析", "📖 Tips"]
         )
         
         st.markdown("---")
@@ -133,6 +133,8 @@ def main():
         show_dashboard()
     elif page == "📅 イベント一覧":
         show_events()
+    elif page == "📆 カレンダー":
+        show_calendar()
     elif page == "🏢 施設管理":
         show_facilities()
     elif page == "📈 分析":
@@ -261,9 +263,107 @@ def show_events():
         st.info("条件に一致するイベントがありません。")
 
 
+def show_calendar():
+    """カレンダー表示"""
+    st.markdown('<h1 class="main-header">📆 イベントカレンダー</h1>', unsafe_allow_html=True)
+    
+    import calendar
+    
+    # 月選択
+    col1, col2 = st.columns(2)
+    with col1:
+        year = st.selectbox("年", [2025, 2026, 2027], index=1)
+    with col2:
+        month = st.selectbox("月", list(range(1, 13)), index=datetime.now().month - 1)
+    
+    # イベント取得
+    first_day = f"{year}-{month:02d}-01"
+    last_day = f"{year}-{month:02d}-{calendar.monthrange(year, month)[1]:02d}"
+    
+    events = get_events(from_date=first_day, to_date=last_day)
+    
+    # 日付ごとにグループ化
+    events_by_date = {}
+    for event in events:
+        date = event.get('event_date', '')
+        if date not in events_by_date:
+            events_by_date[date] = []
+        events_by_date[date].append(event)
+    
+    st.markdown(f"### {year}年{month}月")
+    
+    # カレンダーグリッド表示
+    cal = calendar.Calendar(firstweekday=6)  # 日曜始まり
+    weeks = cal.monthdayscalendar(year, month)
+    
+    # ヘッダー
+    header_cols = st.columns(7)
+    for i, day_name in enumerate(['日', '月', '火', '水', '木', '金', '土']):
+        color = '#ff6b6b' if i == 0 else '#4dabf7' if i == 6 else '#333'
+        header_cols[i].markdown(f"<div style='text-align:center;color:{color};font-weight:bold;'>{day_name}</div>", unsafe_allow_html=True)
+    
+    # カレンダー本体
+    for week in weeks:
+        cols = st.columns(7)
+        for i, day in enumerate(week):
+            if day == 0:
+                cols[i].markdown("")
+            else:
+                date_str = f"{year}-{month:02d}-{day:02d}"
+                day_events = events_by_date.get(date_str, [])
+                
+                # スタイル決定
+                if day_events:
+                    bg_color = '#e8f5e9'
+                    badge = f"<span style='background:#4caf50;color:white;border-radius:4px;padding:2px 6px;font-size:0.8em;'>{len(day_events)}</span>"
+                else:
+                    bg_color = '#fff'
+                    badge = ""
+                
+                with cols[i]:
+                    st.markdown(f"""
+                    <div style='background:{bg_color};padding:8px;border-radius:8px;min-height:60px;border:1px solid #eee;'>
+                        <strong>{day}</strong> {badge}
+                    </div>
+                    """, unsafe_allow_html=True)
+                    
+                    # イベントがあればポップオーバー的に表示
+                    if day_events:
+                        with st.expander(f"📅 {len(day_events)}件", expanded=False):
+                            for ev in day_events[:3]:
+                                st.caption(f"• {ev.get('title', '')[:30]}")
+    
+    st.markdown("---")
+    
+    # 今月のイベントリスト
+    st.subheader("📋 今月のイベント一覧")
+    if events:
+        for event in sorted(events, key=lambda x: x.get('event_date', ''))[:20]:
+            st.markdown(f"""
+            **{event.get('event_date', '')}** - {event.get('title', '')}  
+            🏢 {event.get('venue', '会場不明')[:30]}
+            """)
+    else:
+        st.info("今月のイベントはありません。")
+
+
 def show_facilities():
     """施設管理表示"""
     st.markdown('<h1 class="main-header">🏢 施設管理</h1>', unsafe_allow_html=True)
+    
+    # 活動チェック実行ボタン
+    col1, col2, col3 = st.columns([2, 2, 4])
+    with col1:
+        if st.button("🔍 活動状況をチェック", use_container_width=True):
+            st.info("活動チェックはコマンドラインから実行してください:")
+            st.code("python3 scripts/check_all_facilities.py", language="bash")
+            st.caption("※ 122施設のチェックに約5〜10分かかります")
+    
+    with col2:
+        total_count = len(get_all_facilities())
+        st.metric("登録施設数", total_count)
+    
+    st.markdown("---")
     
     tab1, tab2, tab3 = st.tabs(["✅ アクティブ", "💤 休眠", "🆕 新規（監視中）"])
     
@@ -271,7 +371,10 @@ def show_facilities():
         facilities = get_active_facilities()
         if facilities:
             df = pd.DataFrame(facilities)
-            display_cols = ['name', 'prefecture', 'city', 'website', 'last_event_date']
+            # ソースカラムを追加
+            df['source_type'] = df['id'].apply(lambda x: 'CSV取込' if str(x).startswith('csv_') else '初期データ')
+            
+            display_cols = ['name', 'prefecture', 'city', 'website', 'last_event_date', 'source_type']
             available_cols = [c for c in display_cols if c in df.columns]
             st.dataframe(df[available_cols], hide_index=True, use_container_width=True)
         else:
@@ -281,8 +384,17 @@ def show_facilities():
         facilities = get_dormant_facilities()
         if facilities:
             st.warning("⚠️ 以下の施設は2ヶ月以上イベントがありません")
-            df = pd.DataFrame(facilities)
-            st.dataframe(df[['name', 'prefecture', 'last_event_date']], hide_index=True)
+            
+            for facility in facilities:
+                col1, col2 = st.columns([4, 1])
+                with col1:
+                    st.write(f"**{facility.get('name', '')}** ({facility.get('prefecture', '')}) - 最終: {facility.get('last_event_date', '不明')}")
+                with col2:
+                    if st.button("復活 ↩️", key=f"restore_{facility.get('id')}"):
+                        from core.database import update_facility_status
+                        update_facility_status(facility['id'], 'active', None, '手動復活')
+                        st.success(f"✅ {facility.get('name')} をアクティブに戻しました")
+                        st.rerun()
         else:
             st.success("休眠施設はありません！")
     

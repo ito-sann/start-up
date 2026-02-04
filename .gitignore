@@ -30,3 +30,7 @@ Thumbs.db
 # Local config
 .env
 .env.local
+
+# Google Sheets API
+credentials.json
+token.json
